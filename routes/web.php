@@ -42,3 +42,12 @@ Route::post('fita/store', [PainelController::class, 'fitaStore']);
 Route::post('bando/store', [PainelController::class, 'bandoStore']);
 Route::post('form/store', [PainelController::class, 'formStore']);
 
+
+Route::get('migrate', function () {
+
+    \Artisan::call('migrate');
+
+    dd("Cache is cleared");
+
+});
+
