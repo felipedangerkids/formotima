@@ -19,5 +19,39 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+     function getPriceValue(){
+    var modelo = $("#modelo").find(":selected").data("modelo");
+    var tecido = $("#tecido").find(":selected").data("tecido");
+    var fita = $("#fita").find(":selected").data("fita");
+    var bando = $("#bando").find(":selected").data("bando");
+    var acc = $("#acc").find(":selected").data("acc");
+    var altura = $('#altura').val();
+    var largura = $('#largura').val();
+    var metro = $('#metro').val();
+    var metro_l = $('#metro_l').val();
+    var quantidade = $('#quantidade').val();
+    var bquantidade = $('#bquantidade').val();
+    var aquantidade = $('#aquantidade').val();
+
+    //modelo
+    var tecmodel = tecido + modelo * metro;
+    var resultado1 = tecmodel * quantidade;
+
+    //bando
+    var bandoq = bando * metro_l;
+    var bqv = bandoq * bquantidade;
+
+    //acessorio
+    var accquantidade = acc * aquantidade;
+
+    var total = resultado1 + bqv + accquantidade + fita;
+    var input = $("#total").val(total);
+    var tohtm = $("#valor").html("Total:"+" "+total);
+
+
+     }
+
+</script>
 </body>
 </html>

@@ -37,10 +37,13 @@
                             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                               <div class="navbar-nav">
                                 <a class="nav-link active" href="{{ url('/home') }}">Home</a>
+                                <a class="nav-link" href="{{ url('modelo') }}">Modelos</a>
                                 <a class="nav-link" href="{{ url('tecido') }}">Tecidos</a>
                                 <a class="nav-link" href="{{ url('cor') }}">Cores</a>
+                                <a class="nav-link" href="{{ url('fita') }}">Fitas</a>
+                                <a class="nav-link" href="{{ url('bando') }}">Bando</a>
                                 <a class="nav-link" href="{{ url('acessorio') }}">Acessórios</a>
-                                <a class="nav-link" href="#">Pedidos</a>
+                                <a class="nav-link" href="{{ url('pedidos') }}">Pedidos</a>
 
                               </div>
                             </div>
