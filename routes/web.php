@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PainelController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,11 @@ Route::get('/painel', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('tecido', [PainelController::class, 'tecido']);
+Route::get('cor', [PainelController::class, 'cor']);
+Route::get('acessorio', [PainelController::class, 'acessorio']);
+
+Route::post('tecido/store', [PainelController::class, 'tecidoStore']);
+Route::post('cor/store', [PainelController::class, 'corStore']);
+Route::post('acessorio/store', [PainelController::class, 'acessorioStore']);
