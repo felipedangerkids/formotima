@@ -47,7 +47,7 @@
 
     var total = resultado1 + bqv + accquantidade + fita;
     var input = $("#total").val(total);
-    var tohtm = $("#valor").html("Total:"+" "+total);
+    var tohtm = $("#valor").html("Total:"+" "+total.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}));
 
 
      }
