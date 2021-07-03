@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
-use Barryvdh\DomPDF\PDF;
+use PDF;
 
 
 class PainelController extends Controller
