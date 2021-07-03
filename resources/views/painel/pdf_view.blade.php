@@ -39,5 +39,6 @@
         <li ><strong>Lado da Aba: </strong> {{ $pedido->aba }}</li>
         <li ><strong>Acessório: </strong> {{ $pedido->acessorios }}</li>
         <li ><strong>Quantidade de Acessórios: </strong> {{ $pedido->qty_acc }}</li>
+        <h3>Total: {{  'R$ '.number_format($pedido->total, 2, ',', '.') }}</h3>
 </body>
 </html>
