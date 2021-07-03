@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use PDF;
+
 use App\Models\Cor;
 use App\Models\Fita;
 use App\Models\Bando;
@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use App\Http\Controllers\Controller;
 use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\PDF;
 
 
 class PainelController extends Controller
