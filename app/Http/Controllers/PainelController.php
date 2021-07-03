@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use App\Models\Acessorio;
-use App\Models\Bando;
+use PDF;
 use App\Models\Cor;
 use App\Models\Fita;
+use App\Models\Bando;
 use App\Models\Modelo;
 use App\Models\Pedido;
 use App\Models\Tecido;
+use App\Models\Acessorio;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
+use App\Http\Controllers\Controller;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class PainelController extends Controller
 {
@@ -106,4 +110,10 @@ class PainelController extends Controller
         return view('painel.pedido', compact('pedido'));
     }
 
+    public function createPDF($id)
+    {
+        $pedido = Pedido::find($id);
+        $pdf = PDF::loadView('painel.pdf_view', compact('pedido'));
+        return $pdf->download('pedido.pdf');
+    }
 }

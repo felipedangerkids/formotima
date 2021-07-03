@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <a href="{{ url('/salvar/pdf') }}"> <button class="btn btn-dark">Exportar PDF</button></a>
         <h4 class="text-center">Cliente</h4>
         <ul class="list-group list-group-flush">
             <li class="list-group-item"><strong>Revendedor: </strong> {{ $pedido->revendedor }}</li>
